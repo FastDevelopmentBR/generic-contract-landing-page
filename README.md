@@ -10,3 +10,5 @@ https://getbootstrap.com/docs/5.3/getting-started/download/
 
 - Adicionando Google Font Roboto
 
+- Inclusão do carrossel de imagens na Página Inicial
+Utilizando placeholders de imagens com o aspect ratio 16:9 (widescreen) e escondendo o carrosel em telas "muito pequenas" (XS).
