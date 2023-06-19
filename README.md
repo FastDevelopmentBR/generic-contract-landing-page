@@ -8,3 +8,5 @@ Etapas de Desenvolvimento
 o objetivo é economizar tempo no loading já que a página não utilizará os recursos de tooltip e popover disponibilizados pelo "Bootstrap Completo", mas nada impede que o DEV troque o js novamente ou acrescente o javascript do popover antes ao do bootstrap como informa a página de instalação do Bootstrap.
 https://getbootstrap.com/docs/5.3/getting-started/download/
 
+- Adicionando Google Font Roboto
+
