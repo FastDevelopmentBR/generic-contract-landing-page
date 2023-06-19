@@ -102,8 +102,21 @@
     </div>
     <!-- CARROSSEL PRINCIPAL - FINAL -->
 
+    <section id="quote" class="my-5">
+      <!-- Utilizar figure e figcaption com citação e não figura pode ser estranho, mas é comum, 
+        como citado em nota de uso na página https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/figure -->
+      <figure class="text-center">
+        <blockquote class="blockquote">
+          <p>Citação aleatória qualquer que tenha a ver com o segmento do seu produto.</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+          [Nome do Famoso] em <cite title="Source Title">[Nome do local de origem da citação, talvez livro]</cite>
+        </figcaption>
+      </figure>
+    </section>
+
     <section id="faq"
-             class="my-3">
+             class="my-5">
       <div class="container-xxl">
         <div class="row mb-2">
           <div class="col">
@@ -203,6 +216,7 @@
     </section>
 
 
+  </div>
 
   <!-- Bootstrap JS -->
   <script src="assets/plugins/bootstrap-5.3.0/js/bootstrap.min.js"></script>
