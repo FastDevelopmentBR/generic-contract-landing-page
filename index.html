@@ -32,6 +32,21 @@
       background-color: var(--bs-light);
     }
 
+
+    /* Retirando margem dos itens da citação para centralizar verticalmente o conteúdo corretamente na seção */
+    #quote figure,
+    #quote figure figcaption {
+      margin-bottom: 0;
+    }
+
+    /* Mudando cor de fonte do elementos da citação por causa da cor de fundo da seção */
+    #quote figure blockquote {
+      color: #FFF;
+    }
+
+    #quote figure figcaption {
+      color: rgba(255, 255, 255, 0.6);
+    }
   </style>
 </head>
 
@@ -87,193 +102,200 @@
     </div>
   </nav>
 
-  <div class="container-xxl g-0">
-    <!-- CARROSSEL PRINCIPAL - INÍCIO -->
+  <!-- CARROSSEL PRINCIPAL - INÍCIO -->
+  <section class="container-fluid g-0 bg-secondary">
     <div id="mainCarousel"
-         class="carousel slide d-none d-sm-block">
-      <div class="carousel-indicators">
-        <button type="button"
+         class="container-xxl g-0">
+      <div class="carousel slide d-none d-sm-block">
+        <div class="carousel-indicators">
+          <button type="button"
+                  data-bs-target="#mainCarousel"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"></button>
+          <button type="button"
+                  data-bs-target="#mainCarousel"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+          <button type="button"
+                  data-bs-target="#mainCarousel"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://placehold.co/1280x720"
+                 class="d-block w-100"
+                 alt="Imagem 1">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://placehold.co/1280x720"
+                 class="d-block w-100"
+                 alt="Imagem 2">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="https://placehold.co/1280x720"
+                 class="d-block w-100"
+                 alt="Imagem 3">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev"
+                type="button"
                 data-bs-target="#mainCarousel"
-                data-bs-slide-to="0"
-                class="active"
-                aria-current="true"
-                aria-label="Slide 1"></button>
-        <button type="button"
+                data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"
+                aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next"
+                type="button"
                 data-bs-target="#mainCarousel"
-                data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-        <button type="button"
-                data-bs-target="#mainCarousel"
-                data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
+                data-bs-slide="next">
+          <span class="carousel-control-next-icon"
+                aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://placehold.co/1280x720"
-               class="d-block w-100"
-               alt="Imagem 1">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="https://placehold.co/1280x720"
-               class="d-block w-100"
-               alt="Imagem 2">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <img src="https://placehold.co/1280x720"
-               class="d-block w-100"
-               alt="Imagem 3">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
-          </div>
-        </div>
-      </div>
-
-      <button class="carousel-control-prev"
-              type="button"
-              data-bs-target="#mainCarousel"
-              data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"
-              aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-
-      <button class="carousel-control-next"
-              type="button"
-              data-bs-target="#mainCarousel"
-              data-bs-slide="next">
-        <span class="carousel-control-next-icon"
-              aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
-    <!-- CARROSSEL PRINCIPAL - FINAL -->
+  </section>
+  <!-- CARROSSEL PRINCIPAL - FINAL -->
 
-    <section id="quote" class="my-5">
-      <!-- Utilizar figure e figcaption com citação e não figura pode ser estranho, mas é comum, 
-        como citado em nota de uso na página https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/figure -->
-      <figure class="text-center">
-        <blockquote class="blockquote">
-          <p>Citação aleatória qualquer que tenha a ver com o segmento do seu produto.</p>
-        </blockquote>
-        <figcaption class="blockquote-footer">
-          [Nome do Famoso] em <cite title="Source Title">[Nome do local de origem da citação, talvez livro]</cite>
-        </figcaption>
-      </figure>
-    </section>
 
-    <section id="faq"
-             class="my-5">
-      <div class="container-xxl">
-        <div class="row mb-2">
-          <div class="col">
-            <h2>Dúvidas mais frequentes</h2>
-          </div>
+    </div>
+  </section>
 
-          <div class="col-auto">
-            <a class="btn btn-link"
-               href="/faq">ver lista completa</a>
+  <section id="quote"
+           class="my-5 py-5 bg-secondary container-fluid">
+    <!-- Utilizar figure e figcaption com citação e não figura pode ser estranho, mas é comum, 
+              como citado em nota de uso na página https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/figure -->
+    <figure class="text-center">
+      <blockquote class="blockquote">
+        <p>Citação aleatória qualquer que tenha a ver com o segmento do seu produto.</p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        [Nome do Famoso] em <cite title="Source Title">[Nome do local de origem da citação, talvez livro]</cite>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section id="faq"
+           class="my-5">
+    <div class="container">
+      <div class="row mb-2">
+        <div class="col">
+          <h2>Dúvidas mais frequentes</h2>
+        </div>
+
+        <div class="col-auto">
+          <a class="btn btn-link"
+             href="faq">ver lista completa</a>
+        </div>
+      </div>
+
+      <div class="accordion"
+           id="faqAccordion">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq-question-1"
+                    aria-expanded="true"
+                    aria-controls="faq-question-1">
+              Pergunta 1
+            </button>
+          </h3>
+          <div id="faq-question-1"
+               class="accordion-collapse collapse show"
+               data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Quam nulla porttitor massa id neque aliquam vestibulum. Dui accumsan sit amet nulla
+              facilisi morbi. Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue. Aliquam vestibulum
+              morbi
+              blandit cursus risus at ultrices. Nisl nisi scelerisque eu ultrices vitae. At imperdiet dui accumsan sit
+              amet nulla. Nam aliquam sem et tortor consequat id porta nibh. Volutpat lacus laoreet non curabitur. Mi
+              quis hendrerit dolor magna eget est lorem ipsum dolor. Adipiscing vitae proin sagittis nisl rhoncus
+              mattis. Massa ultricies mi quis hendrerit.
+            </div>
           </div>
         </div>
 
-        <div class="accordion"
-             id="faqAccordion">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-question-1"
-                      aria-expanded="true"
-                      aria-controls="faq-question-1">
-                Pergunta 1
-              </button>
-            </h2>
-            <div id="faq-question-1"
-                 class="accordion-collapse collapse show"
-                 data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Quam nulla porttitor massa id neque aliquam vestibulum. Dui accumsan sit amet nulla
-                facilisi morbi. Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue. Aliquam vestibulum
-                morbi
-                blandit cursus risus at ultrices. Nisl nisi scelerisque eu ultrices vitae. At imperdiet dui accumsan sit
-                amet nulla. Nam aliquam sem et tortor consequat id porta nibh. Volutpat lacus laoreet non curabitur. Mi
-                quis hendrerit dolor magna eget est lorem ipsum dolor. Adipiscing vitae proin sagittis nisl rhoncus
-                mattis. Massa ultricies mi quis hendrerit.
-              </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq-question-2"
+                    aria-expanded="false"
+                    aria-controls="faq-question-2">
+              Pergunta 2
+            </button>
+          </h3>
+          <div id="faq-question-2"
+               class="accordion-collapse collapse"
+               data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Quam nulla porttitor massa id neque aliquam vestibulum. Dui accumsan sit amet nulla
+              facilisi morbi. Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue. Aliquam vestibulum
+              morbi
+              blandit cursus risus at ultrices. Nisl nisi scelerisque eu ultrices vitae. At imperdiet dui accumsan sit
+              amet nulla. Nam aliquam sem et tortor consequat id porta nibh. Volutpat lacus laoreet non curabitur. Mi
+              quis hendrerit dolor magna eget est lorem ipsum dolor. Adipiscing vitae proin sagittis nisl rhoncus
+              mattis. Massa ultricies mi quis hendrerit.
             </div>
           </div>
+        </div>
 
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-question-2"
-                      aria-expanded="false"
-                      aria-controls="faq-question-2">
-                Pergunta 2
-              </button>
-            </h2>
-            <div id="faq-question-2"
-                 class="accordion-collapse collapse"
-                 data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Quam nulla porttitor massa id neque aliquam vestibulum. Dui accumsan sit amet nulla
-                facilisi morbi. Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue. Aliquam vestibulum
-                morbi
-                blandit cursus risus at ultrices. Nisl nisi scelerisque eu ultrices vitae. At imperdiet dui accumsan sit
-                amet nulla. Nam aliquam sem et tortor consequat id porta nibh. Volutpat lacus laoreet non curabitur. Mi
-                quis hendrerit dolor magna eget est lorem ipsum dolor. Adipiscing vitae proin sagittis nisl rhoncus
-                mattis. Massa ultricies mi quis hendrerit.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-question-3"
-                      aria-expanded="false"
-                      aria-controls="faq-question-3">
-                Pergunta 3
-              </button>
-            </h2>
-            <div id="faq-question-3"
-                 class="accordion-collapse collapse"
-                 data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Quam nulla porttitor massa id neque aliquam vestibulum. Dui accumsan sit amet nulla
-                facilisi morbi. Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue. Aliquam vestibulum
-                morbi
-                blandit cursus risus at ultrices. Nisl nisi scelerisque eu ultrices vitae. At imperdiet dui accumsan sit
-                amet nulla. Nam aliquam sem et tortor consequat id porta nibh. Volutpat lacus laoreet non curabitur. Mi
-                quis hendrerit dolor magna eget est lorem ipsum dolor. Adipiscing vitae proin sagittis nisl rhoncus
-                mattis. Massa ultricies mi quis hendrerit.
-              </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq-question-3"
+                    aria-expanded="false"
+                    aria-controls="faq-question-3">
+              Pergunta 3
+            </button>
+          </h3>
+          <div id="faq-question-3"
+               class="accordion-collapse collapse"
+               data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Quam nulla porttitor massa id neque aliquam vestibulum. Dui accumsan sit amet nulla
+              facilisi morbi. Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue. Aliquam vestibulum
+              morbi
+              blandit cursus risus at ultrices. Nisl nisi scelerisque eu ultrices vitae. At imperdiet dui accumsan sit
+              amet nulla. Nam aliquam sem et tortor consequat id porta nibh. Volutpat lacus laoreet non curabitur. Mi
+              quis hendrerit dolor magna eget est lorem ipsum dolor. Adipiscing vitae proin sagittis nisl rhoncus
+              mattis. Massa ultricies mi quis hendrerit.
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
 
-  </div>
 
   <!-- Bootstrap JS -->
   <script src="assets/plugins/bootstrap-5.3.0/js/bootstrap.min.js"></script>
