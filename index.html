@@ -36,6 +36,11 @@
       background-color: var(--bs-light);
     }
 
+    section {
+      padding-top: 77px;
+      /* Altura da Navbar fixada no topo, somado a 20px para o conteúdo não ficar colado ao entrar na seção através de um link direto com o id */
+    }
+
     #vantagens p {
       display: flex;
       align-items: center;
@@ -137,7 +142,7 @@
   </nav>
 
   <!-- CARROSSEL PRINCIPAL - INÍCIO -->
-  <section class="container-fluid g-0 bg-secondary">
+  <section class="container-fluid g-0 bg-secondary pt-0">
     <div id="mainCarousel"
          class="container-xxl g-0">
       <div class="carousel slide d-none d-sm-block">
@@ -211,8 +216,7 @@
   </section>
   <!-- CARROSSEL PRINCIPAL - FINAL -->
 
-  <section id="vantagens"
-           class="my-5">
+  <section id="vantagens">
     <div class="container text-center">
       <h2>Saiba porque <strong>[Nome do Produto]</strong></h2>
       <h3 class="mb-4">é essencial para você.</h3>
@@ -230,22 +234,23 @@
     </div>
   </section>
 
-  <section id="quote"
-           class="my-5 py-5 bg-secondary container-fluid">
-    <!-- Utilizar figure e figcaption com citação e não figura pode ser estranho, mas é comum, 
-              como citado em nota de uso na página https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/figure -->
-    <figure class="text-center">
-      <blockquote class="blockquote">
-        <p>Citação aleatória qualquer que tenha a ver com o segmento do seu produto.</p>
-      </blockquote>
-      <figcaption class="blockquote-footer">
-        [Nome do Famoso] em <cite title="Source Title">[Nome do local de origem da citação, talvez livro]</cite>
-      </figcaption>
-    </figure>
+  <section id="quote">
+    <div class="py-5 bg-secondary container-fluid">
+      <!-- Utilizar figure e figcaption com citação e não figura pode ser estranho, mas é comum, 
+                       como citado em nota de uso na página https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/figure -->
+      <figure class="text-center">
+        <blockquote class="blockquote">
+          <p>Citação aleatória qualquer que tenha a ver com o segmento do seu produto.</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+          [Nome do Famoso] em <cite title="Source Title">[Nome do local de origem da citação, talvez livro]</cite>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
   </section>
 
-  <section id="faq"
-           class="my-5">
+  <section id="faq">
     <div class="container">
       <div class="row mb-2">
         <div class="col">
